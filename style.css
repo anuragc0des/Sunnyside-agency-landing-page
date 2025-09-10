@@ -1,21 +1,3 @@
-:root {
-  --soft-red: hsl(6, 99%, 70%);
-  --soft-red-opacity: hsl(6, 99%, 70%, 25%);
-  --yellow: hsl(50, 100%, 50%);
-  --yellow-opacity: hsl(50, 100%, 50%, 22%);
-  --dark-desaturated-cyan-text: hsl(167, 40%, 24%);
-  --dark-blue-photography-text: hsl(198, 62%, 26%);
-  --dark-moderate-cyan-footer: hsl(167, 44%, 70%);
-  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
-  --very-dark-grayish-blue: hsl(213, 9%, 39%);
-  --dark-grayish-blue: hsl(232, 10%, 55%);
-  --grayish-blue: hsl(210, 4%, 67%);
-  --graphic-design-bg: hsl(165, 47%, 74%);
-  --photography-bg: hsl(198, 100%, 65%);
-  --header-bg-cyan: hsl(200, 100%, 62%);
-  --white: hsl(0, 0%, 100%);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -23,104 +5,283 @@
 }
 
 .container {
-  max-width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
-header {
+.container header {
   width: 100%;
   min-height: 100vh;
   background-image: url(./images/desktop/image-header.jpg);
   background-size: cover;
   background-position: center;
-  display: flex;
-  flex-direction: column;
 }
 
 header nav {
-  width: 100%;
   position: absolute;
-  padding: 50px 150px;
+  width: 100%;
+  padding: 50px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid; */
 }
 
-nav .header-list ul {
+nav .logo img {
+  width: 150px;
+  cursor: pointer;
+}
+
+nav .nav-list ul {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.header-list ul li {
+.nav-list ul li {
   list-style: none;
   font-size: 1.1rem;
   color: white;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.nav-btn {
-  background-color: white;
+.nav-list ul li button {
+  padding: 10px 20px;
   border: none;
   outline: none;
-  padding: 12px 20px;
   border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 header .header-text {
   width: 100%;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  color: white;
+  gap: 40px;
 }
 
 .header-text h1 {
-  font-size: 3.8rem;
+  font-size: 4rem;
+  color: white;
 }
 
-main .transform-content {
+.header-text img {
+  width: 50px;
+}
+
+.main-sec {
   width: 100%;
   min-height: 100vh;
   display: flex;
 }
 
-.transform-content .transform-txt {
+.main-sec .pad {
   width: 50%;
+  padding: 200px 180px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
+  gap: 25px;
 }
 
-.transform-content .transform-img {
+.main-sec .main-img {
   width: 50%;
+}
+
+.main-sec .transform-img {
   background-image: url(./images/desktop/image-transform.jpg);
   background-size: cover;
+  background-position: center;
 }
 
-main .standout-content {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
+.main-sec .standout-img {
+  background-image: url(./images/desktop/image-stand-out.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
-.standout-content .standout-txt {
+.main-sec .graphic {
   width: 50%;
+  background-image: url(./images/desktop/image-graphic-design.jpg);
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
+  align-items: center;
+  text-align: center;
+  padding-top: 250px;
+  gap: 40px;
 }
 
-.standout-content .standout-img {
+.main-sec .ser-p {
+  max-width: 330px;
+  line-height: 28px;
+  /* border: 1px solid; */
+}
+
+.main-sec .photography {
   width: 50%;
-  background-image: url(./images/desktop/image-stand-out.jpg);
+  background-image: url(./images/desktop/image-photography.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 250px;
+  gap: 40px;
+}
+
+main .testimonials {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 0px 100px;
+}
+
+.testimonials h1 {
+  letter-spacing: 1px;
+  font-size: 2rem;
+  color: grey;
+}
+
+.testimonials-list ul {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.testimonials-list ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+}
+
+.testimonials-list ul li .img-circle {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+}
+
+.testimonials-list ul li .rev {
+  max-width: 300px;
+  color: grey;
+}
+
+.testimonials-list ul li .clients-name {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.clients-name p {
+  font-weight: 600;
+}
+
+.clients-name span {
+  color: grey;
+  font-size: 12px;
+}
+
+.emily {
+  background-image: url(./images/image-emily.jpg);
+  background-position: center;
   background-size: cover;
 }
 
+.thomas {
+  background-image: url(./images/image-thomas.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.jennie {
+  background-image: url(./images/image-jennie.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+main .four-img {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+}
+
+.four-img .img-div1 {
+  width: 25%;
+  background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.four-img .img-div2 {
+  width: 25%;
+  background-image: url(./images/desktop/image-gallery-orange.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.four-img .img-div3 {
+  width: 25%;
+  background-image: url(./images/desktop/image-gallery-cone.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.four-img .img-div4 {
+  width: 25%;
+  background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+footer {
+  background-color: hsl(167, 34%, 41%);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0px;
+  color: hsl(167, 40%, 24%);
+}
+
+footer h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+footer .footer-ser ul {
+  display: flex;
+  gap: 40px;
+  align-content: center;
+}
+
+footer .footer-ser ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+footer .footer-social ul {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+footer .footer-social ul li {
+  list-style: none;
+  cursor: pointer;
+}
